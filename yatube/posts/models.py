@@ -19,6 +19,7 @@ class Group(models.Model):
 
 
 class Post(models.Model):
+    objects = models.Manager
     text = models.TextField(verbose_name='Текст поста', max_length=3000)
     pub_date = models.DateTimeField(verbose_name='Дата публикации',
                                     auto_now_add=True)

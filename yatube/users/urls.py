@@ -19,18 +19,18 @@ urlpatterns = [
         'logout/',
         LogoutView.as_view(template_name='users/logged_out.html'),
         name='logout'
-    ),
+        ),
     path(
         'login/',
         LoginView.as_view(template_name='users/login.html'),
         name='login'
-    ),
+        ),
     path(
         'password_reset/',
         PasswordResetView.as_view(
             template_name='users/password_reset_form.html'),
         name='password_reset'
-    ),
+        ),
     path('password_reset/done/',
          PasswordResetDoneView.as_view(
              template_name='users/password_reset_done.html')
